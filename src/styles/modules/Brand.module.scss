@@ -1,0 +1,23 @@
+/**
+  Brand element style
+    * Theme
+    * Size
+*/
+
+// common style
+.common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // img
+  img {
+    max-width: 100%;
+  }
+}
+
+// // Size: small
+// .small {
+//   --brand-size-small: 20px;
+//   width: var(--brand-size-small);
+// }

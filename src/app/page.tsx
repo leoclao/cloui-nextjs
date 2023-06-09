@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import Title from '@/elements/Title';
+import Label from '@/elements/Label';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
@@ -39,6 +41,10 @@ export default function Home() {
         />
       </div>
 
+      <div>
+        <Title theme={0} size={0} title={'Test title element ->'} />
+        <Label text={'Label'} size={3} />
+      </div>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -91,5 +97,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
