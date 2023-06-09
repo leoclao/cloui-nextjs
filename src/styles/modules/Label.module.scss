@@ -1,0 +1,45 @@
+/**
+  Label element style
+    * Theme
+    * Size
+*/
+.label {
+  // Common style
+  --label-color: grey;
+  display: inline-block;
+  font-size: medium;
+  color: var(--label-color);
+}
+
+// Theme: Primary
+.Primary {
+  --label-color: skyblue;
+  color: var(--label-color);
+}
+
+// Theme: Secondary
+.Secondary {
+  --label-color: salmon;
+  color: var(--label-color);
+}
+
+// Theme: Tertiary
+.Tertiary {
+  --label-color: violet;
+  color: var(--label-color);
+}
+
+// Size: Small
+.Small {
+  font-size: small;
+}
+
+// Size: Medium
+.Medium {
+  font-size: medium;
+}
+
+// Size: Large
+.Large {
+  font-size: large;
+}

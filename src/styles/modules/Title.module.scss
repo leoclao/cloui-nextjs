@@ -1,0 +1,97 @@
+/**
+  Title element style
+    * Theme
+    * Size
+*/
+
+.title {
+  // Common style
+  --title-color: grey;
+  display: inline-block;
+  font-size: medium;
+  color: var(--title-color);
+}
+
+// Size: H1
+.H1{
+  font-size: xx-large;
+  font-weight: bold;
+
+  &Display {
+    font-size: xx-large;
+    font-weight: lighter;
+  }
+}
+
+// Size: H2
+.H2{
+  font-size: x-large;
+  font-weight: bold;
+
+  &Display {
+    font-size: x-large;
+    font-weight: lighter;
+  }
+}
+
+// Size: H3
+.H3{
+  font-size: large;
+  font-weight: bold;
+
+  &Display {
+    font-size: large;
+    font-weight: lighter;
+  }
+}
+
+// Size: H4
+.H4{
+  font-size: medium;
+  font-weight: bold;
+
+  &Display {
+    font-size: medium;
+    font-weight: lighter;
+  }
+}
+
+// Size: H5
+.H5{
+  font-size: small;
+  font-weight: bold;
+
+  &Display {
+    font-size: small;
+    font-weight: lighter;
+  }
+}
+
+// Size: H6
+.H6{
+  font-size: x-small;
+  font-weight: bold;
+
+  &Display {
+    font-size: x-small;
+    font-weight: lighter;
+  }
+}
+
+// Theme: Primary
+.Primary {
+  --title-color: skyblue;
+  color: var(--title-color);
+}
+
+// Theme: Secondary
+.Secondary {
+  --title-color: salmon;
+  color: var(--title-color);
+}
+
+// Theme: Tertiary
+.Tertiary {
+  --title-color: violet;
+  color: var(--title-color);
+}
