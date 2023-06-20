@@ -8,7 +8,7 @@ export enum eTheme {
 // Enum: Size
 export enum eSize {
   Tiny,
-  XSmall,
+  Smaller,
   Small,
   Medium,
   Large,

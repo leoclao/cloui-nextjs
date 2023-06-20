@@ -29,6 +29,16 @@
   color: var(--label-color);
 }
 
+// Size: Tiny
+.Tiny {
+  font-size: x-small;
+}
+
+// Size: XSmall
+.Smaller {
+  font-size: smaller;
+}
+
 // Size: Small
 .Small {
   font-size: small;
@@ -42,4 +52,29 @@
 // Size: Large
 .Large {
   font-size: large;
+}
+
+// Size: XLarge
+.XLarge {
+  font-size: x-large;
+}
+
+// Size: XXLarge
+.XXLarge {
+  font-size: xx-large;
+}
+
+// Size: XXXLarge
+.XXXLarge {
+  font-size: xxx-large;
+}
+
+// Size: Big
+.Big {
+  font-size: 112px;
+}
+
+// Size: Huge
+.Huge {
+  font-size: 128px;
 }
