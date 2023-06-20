@@ -22,10 +22,9 @@ export const Label: React.FC<LabelProps> = ({ text, size, theme, customStyle }) 
       'label': true,
       [Styles[`${themeName}`]]: checkValue(themeName),
       [Styles[`${sizeName}`]]: checkValue(sizeName),
-    }
+    },
+    customStyle
   )
 
   return <span className={style}>{text}</span>;
 };
-
-// export default Label;
