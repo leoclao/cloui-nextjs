@@ -18,3 +18,13 @@ export enum eSize {
   Big,
   Huge,
 }
+
+// Enum: Aspect Ratio
+export enum aspectRatio {
+  Auto, // auto
+  Square, // 1:1
+  Television, // 4:3
+  Video, // 16:9
+  UltraWide, // 21:9
+  SuperUltraWide // 32:9
+}
