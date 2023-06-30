@@ -1,0 +1,88 @@
+/**
+  Paragraph element style
+    * Theme
+    * Size
+*/
+
+// Common styles
+.C {
+  font-size: medium;
+}
+
+// Theme: Primary
+.Primary {
+  --title-color: skyblue;
+  color: var(--title-color);
+}
+
+// Theme: Secondary
+.Secondary {
+  --title-color: salmon;
+  color: var(--title-color);
+}
+
+// Theme: Tertiary
+.Tertiary {
+  --title-color: violet;
+  color: var(--title-color);
+}
+
+// Size: Tiny
+.Tiny {
+  font-size: xx-small;
+  font-weight: medium;
+}
+
+// Size: Smaller
+.Smaller {
+  font-size: smaller;
+  font-weight: medium;
+}
+
+// Size: Small
+.Small {
+  font-size: small;
+  font-weight: medium;
+}
+
+// Size: Medium
+.Medium {
+  font-size: medium;
+  font-weight: medium;
+}
+
+// Size: Large
+.Large {
+  font-size: large;
+  font-weight: medium;
+}
+
+// Size: XLarge
+.XLarge {
+  font-size: x-large;
+  font-weight: medium;
+}
+
+// Size: XXLarge
+.XXLarge {
+  font-size: xx-large;
+  font-weight: medium;
+}
+
+// Size: XXXLarge
+.XXXLarge {
+  font-size: xxx-large;
+  font-weight: medium;
+}
+
+// Size: Big
+.Big {
+  font-size: 72px;
+  font-weight: medium;
+}
+
+// Size: Huge
+.Hug {
+  font-size: 96px;
+  font-weight: medium;
+}
