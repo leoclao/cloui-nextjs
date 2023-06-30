@@ -19,20 +19,13 @@ export default meta;
 
 type Story = StoryObj<typeof Title>;
 
+// Theme: Default
 export const Default: Story = {
   args: {
     title: 'Title',
-    size: 0,
+    size: 2,
     theme: 0
   },
-  // argTypes: {
-  //   size: {
-  //     control: false,
-  //   },
-  //   theme: {
-  //     control: false,
-  //   }
-  // }
 }
 
 // Theme: Primary
@@ -51,6 +44,22 @@ export const Primary: Story = {
   }
 }
 
+// Theme: Secondary
+export const Secondary: Story = {
+  args: {
+    ...Default.args,
+    theme: 1,
+  },
+  argTypes: {
+    size: {
+      control: false,
+    },
+    theme: {
+      control: false,
+    }
+  }
+}
+
 // Theme: Tertiary
 export const Tertiary: Story = {
   args: {
@@ -58,15 +67,14 @@ export const Tertiary: Story = {
     theme: 2,
   },
   argTypes: {
-    // ...Default.argTypes.theme,
     theme: {
       control: false,
     },
   },
 }
 
-// Size: Tiny
-export const Tiny: Story = {
+// Size: H1
+export const H1: Story = {
   args: {
     ...Default.args,
     size: 0,
@@ -78,101 +86,57 @@ export const Tiny: Story = {
   },
 }
 
-// Size: Smaller
-export const Smaller: Story = {
+// Size: H2
+export const H2: Story = {
   args: {
     ...Default.args,
     size: 1,
   },
   argTypes: {
-    ...Tiny.argTypes,
+    ...H1.argTypes,
   }
 }
 
-// Size: Small
-export const Small: Story = {
+// Size: H3
+export const H3: Story = {
   args: {
     ...Default.args,
     size: 2,
   },
   argTypes: {
-    ...Tiny.argTypes,
+    ...H1.argTypes,
   }
 }
 
-// Size: Medium
-export const Medium: Story = {
+// Size: H4
+export const H4: Story = {
   args: {
     ...Default.args,
     size: 3,
   },
   argTypes: {
-    ...Tiny.argTypes,
+    ...H1.argTypes,
   }
 }
 
-// Size: Large
-export const Large: Story = {
+// Size: H5
+export const H5: Story = {
   args: {
     ...Default.args,
     size: 4,
   },
   argTypes: {
-    ...Tiny.argTypes,
+    ...H1.argTypes,
   }
 }
 
-// Size: XLarge
-export const XLarge: Story = {
+// Size: H6
+export const H6: Story = {
   args: {
     ...Default.args,
     size: 5,
   },
   argTypes: {
-    ...Tiny.argTypes,
-  }
-}
-
-// Size: XXLarge
-export const XXLarge: Story = {
-  args: {
-    ...Default.args,
-    size: 6,
-  },
-  argTypes: {
-    ...Tiny.argTypes,
-  }
-}
-
-// Size: XXXLarge
-export const XXXLarge: Story = {
-  args: {
-    ...Default.args,
-    size: 7,
-  },
-  argTypes: {
-    ...Tiny.argTypes,
-  }
-}
-
-// Size: Big
-export const Big: Story = {
-  args: {
-    ...Default.args,
-    size: 8,
-  },
-  argTypes: {
-    ...Tiny.argTypes,
-  }
-}
-
-// Size: Huge
-export const Huge: Story = {
-  args: {
-    ...Default.args,
-    size: 9,
-  },
-  argTypes: {
-    ...Tiny.argTypes,
+    ...H1.argTypes,
   }
 }
