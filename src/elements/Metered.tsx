@@ -18,23 +18,28 @@ export interface MeteredProps {
 }
 
 export const Metered: React.FC<MeteredProps> = ({ icon, size = 3, theme, status, timer, geo = 0, vertical: false }) => {
+  const geoName = getKeyValue(eGeometry, geo);
+  const verName = vertical && 'Vertical';
+  
   const sizeName = getKeyValue(eSize, size);
   const themeName = getKeyValue(eTheme, theme);
   const statusName = getKeyValue(eMessage, status);
-  const geoName = getKeyValue(eGeometry, line);
+  
+  const newSizeName = geoName === "Circle" ? `${sizeName + geoName}` : `${sizeName + verName}`;
+
   const meteredStyle = cx(C, {
-    [Styles[`${sizeTheme]}`]: checkValue(sizeTheme),
-    [Styles[`${sizeName] }`]: checkValue(sizeName),
-    [Styles[`${statusName] }`]: checkValue(statusName),
+    [Styles[`${newSizeName}`]]: checkValue(sizeName),
+    [Styles[`${themeName}`]]: checkValue(themeName),
+    [Styles[`${statusName}`]]: checkValue(statusName),
   })
 
   const MeteredIcon = icon && icon;
   const MeteredDom = (
-    geoName == 'Line'
+    geoName === 'Line'
     ?
-      <meter className={} />
+      <meter className={meteredStyle} />
     :
-      <div className={}>
+      <div className={meteredStyle}>
         {MeteredIcon}
       </div>
   );

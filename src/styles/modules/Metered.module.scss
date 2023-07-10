@@ -7,3 +7,211 @@
 .C {
   width: 100%;
 }
+
+// Theme: Primary
+.Primary {
+  --title-color: skyblue;
+  color: var(--title-color);
+}
+
+// Theme: Secondary
+.Secondary {
+  --title-color: salmon;
+  color: var(--title-color);
+}
+
+// Theme: Tertiary
+.Tertiary {
+  --title-color: violet;
+  color: var(--title-color);
+}
+
+// Size: Tiny => Line [Base, Vertical], Circle.
+.Tiny {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 1px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 1px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Size: Smaller
+.Smaller {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 2px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 2px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// Size: Small
+.Small {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 3px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 3px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Size: Medium
+.Medium {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 4px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 4px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Size: Large
+.Large {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 5px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 5px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+// Size: XLarge
+.XLarge {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 6px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 6px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+// Size: XXLarge
+.XXLarge {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 8px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 8px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+// Size: XXXLarge
+.XXXLarge {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 10px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 10px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// Size: Big
+.Big {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 12px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 12px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+// Size: Huge
+.Hug {
+  // Size: default, is line horizontal
+  width: 100%;
+  height: 16px;
+
+  // Size with line: is line vertical
+  &Vertical {
+    width: 16px;
+    height: 100%;
+  }
+
+  // Size with Circle: is line vertical
+  &Circle {
+    width: 56px;
+    height: 56px;
+  }
+}
