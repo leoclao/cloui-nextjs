@@ -9,7 +9,7 @@ import Styles from '@/styles/modules/Brand.module.scss';
 
 const cx = classNames.bind(Styles);
 
-export interface BrandProps {
+interface BrandProps {
   size?: eSize;
   href?: string | undefined;
   description?: string | undefined;
@@ -18,7 +18,7 @@ export interface BrandProps {
   imgHeight?: string | undefined;
 }
 
-export const Brand: React.FC<BrandProps> = ({ size }) => {
+const Brand: React.FC<BrandProps> = ({ size }) => {
   const sizeName = getKeyByValue(eSize, size);
   const style = cx({
     brand: true,
@@ -37,3 +37,5 @@ export const Brand: React.FC<BrandProps> = ({ size }) => {
 
   return brandDom;
 };
+
+export default Brand;

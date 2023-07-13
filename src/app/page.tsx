@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Title from '@/elements/Title';
-import Label from '@/elements/Label';
+import { Title } from '@/elements/Title';
+import { Label } from '@/elements/Label';
+import { Metered } from '@/elements/Metered';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -44,6 +45,14 @@ export default function Home() {
       <div>
         <Title theme={0} size={0} title={'Test title element ->'} />
         <Label text={'Label'} size={3} />
+        <Metered geo={0}
+          icon="fa fa-time"
+          size={2}
+          status={0}
+          theme={0}
+          timer={40}
+          vertical
+        />
       </div>
       <div className={styles.grid}>
         <a
