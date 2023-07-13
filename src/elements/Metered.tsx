@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { eTheme, eSize, eDirection, eGeometry, eMessage } from '@/utils/types';
-import { checkValue, getKeyValue } from '@/utils/function'
+import { checkValue, getKeyByValue } from '@/utils/function'
 
 import Styles from '@/styles/modules/Metered.module.scss';
 
@@ -13,21 +13,22 @@ export interface MeteredProps {
   theme?: eTheme;
   status?: eMessage;
   timer?: number;
-  geo?: eGeometry;
+  geometry?: eGeometry;
   vertical?: boolean;
 }
 
-export const Metered: React.FC<MeteredProps> = ({ icon, size = 3, theme, status, timer, geo = 0, vertical: false }) => {
-  const geoName = getKeyValue(eGeometry, geo);
+export const Metered: React.FC<MeteredProps> = ({ icon, size = 3, theme = 0, status = 0, timer = 0, geometry = 0, vertical = false }) => {
+  const geoName = getKeyByValue(eGeometry, geometry);
   const verName = vertical && 'Vertical';
   
-  const sizeName = getKeyValue(eSize, size);
-  const themeName = getKeyValue(eTheme, theme);
-  const statusName = getKeyValue(eMessage, status);
+  const sizeName = getKeyByValue(eSize, size);
+  const themeName = getKeyByValue(eTheme, theme);
+  const statusName = getKeyByValue(eMessage, status);
   
-  const newSizeName = geoName === "Circle" ? `${sizeName + geoName}` : `${sizeName + verName}`;
+  const newSizeName = geoName === 'Circle' ? `${sizeName + geoName}` : `${sizeName + verName}`;
 
-  const meteredStyle = cx(C, {
+  const meteredStyle = cx({
+    C: true,
     [Styles[`${newSizeName}`]]: checkValue(sizeName),
     [Styles[`${themeName}`]]: checkValue(themeName),
     [Styles[`${statusName}`]]: checkValue(statusName),

@@ -8,7 +8,7 @@ import Styles from '@/styles/modules/Button.module.scss';
 
 const cx = classNames.bind(Styles);
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
   title?: string;
   size?: eSize;
@@ -22,7 +22,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconRight: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   label,
   title,
   size,
@@ -61,3 +61,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   )
 }
+
+export default
