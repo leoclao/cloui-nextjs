@@ -3,7 +3,6 @@
 const path = require('path');
 require('dotenv').config();
 
-
 const nextConfig = {
   output: 'export',
   // resolve: {
@@ -14,6 +13,6 @@ const nextConfig = {
   //     '@utils': path.join(__dirname, './src/utils'),
   //   },
   // }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
