@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import classNames from "classnames/bind";
+import { eSize, aspectRatio } from "@/utils/types";
+import { getKeyByValue, checkValue } from "@/utils/function";
 
 import Styles from '@/styles/modules/Img.module.scss'
-import Image from "next/image";
 
 const cx = classNames(Styles);
 
@@ -13,7 +15,7 @@ export interface ImgProps {
   desc?: string;
   loader?: Function;
   fill?: boolean;
-  sizes?: string;
+  sizes?: eSize;
   quality?: number;
   priority?: boolean;
   placeholder?: string;
@@ -23,7 +25,7 @@ export interface ImgProps {
   loading?: string
   blurDataURL?: string;
   srcset?: string;
-  ratio?: number;
+  ratio?: aspectRatio;
 }
 
 export const Img: React.FC<ImgProps> = ({
@@ -33,7 +35,7 @@ export const Img: React.FC<ImgProps> = ({
   desc,
   loader,
   fill,
-  sizes,
+  sizes = 3,
   quality,
   priority,
   placeholder,
@@ -43,11 +45,15 @@ export const Img: React.FC<ImgProps> = ({
   loading,
   blurDataURL,
   srcset,
-  ratio
+  ratio = 0
 }) => {
+
+  const getRatioValue = getKeyByValue(aspectRatio, ratio);
+  const ratioName = checkValue(getRatioValue) ? `Ratio${getRatioValue}` : 'Auto'
+
   const imgStyle = classNames(Styles.C, {
-    [Styles.Ratio${ ratio }]: ratio && true,
+    [Styles[`${ratioName}`]]: true,
   });
 
-return <Image src={src} width={width} height={height} alt={desc} loader={loader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingComplete={onLoadingComplete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} srcset={srcset} ratio={ratio} />
+  return <Image src={src} width={width} height={height} alt={desc} loader={loader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingComplete={onLoadingComplete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} srcset={srcset} ratio={ratio} />
 };
