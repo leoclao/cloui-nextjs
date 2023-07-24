@@ -35,7 +35,7 @@ export const Img: React.FC<ImgProps> = ({
   desc,
   loader,
   fill,
-  sizes = 3,
+    sizes = eSize.Medium,   
   quality,
   priority,
   placeholder,
