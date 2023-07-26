@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\components",
-    "\\src\\utils"
+    "\\src\\elements"
   ],
-  "SelectedNode": "\\src\\utils\\types.ts",
+  "SelectedNode": "\\src\\elements\\Metered.tsx",
   "PreviewInSolutionExplorer": false
 }

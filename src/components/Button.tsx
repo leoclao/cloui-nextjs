@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string;
   size?: eSize;
   theme?: eTheme;
-  rounded?: sSize | 'Full';
+  rounded?: eSize | 'Full';
   vertical?: boolean;
   hollow?: boolean;
   disabled?: boolean;

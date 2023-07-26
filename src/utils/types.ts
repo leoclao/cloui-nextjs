@@ -5,6 +5,12 @@ export enum eTheme {
   Tertiary,
 }
 
+export enum eThemeMode {
+  Default,
+  Dark,
+  Light,
+}
+
 // Enum: Size
 export enum eSize {
   Tiny,
