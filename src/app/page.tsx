@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { Title } from '@/elements/Title';
 import { Label } from '@/elements/Label';
 import { Metered } from '@/elements/Metered';
+import { Img } from '@/elements/Image';
+// import { ImgDemo } from '/vercel.svg';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -53,6 +55,7 @@ export default function Home() {
           timer={40}
           vertical
         />
+        <Img src={'https://picsum.photos/id/237/200/300'} />
       </div>
       <div className={styles.grid}>
         <a
