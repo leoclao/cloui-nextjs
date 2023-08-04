@@ -15,7 +15,7 @@ export interface ImgProps {
   desc?: string;
   loader?: Function;
   fill?: boolean;
-  sizes?: eSize;
+  sizes?: string; //"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
   quality?: number;
   priority?: boolean;
   placeholder?: string;
@@ -24,7 +24,6 @@ export interface ImgProps {
   onError?: Function;
   loading?: string
   blurDataURL?: string;
-  srcset?: string;
   ratio?: aspectRatio;
 }
 
@@ -35,7 +34,7 @@ export const Img: React.FC<ImgProps> = ({
   desc,
   loader,
   fill,
-    sizes = eSize.Medium,   
+  sizes = eSize.Medium,
   quality,
   priority,
   placeholder,
@@ -44,7 +43,6 @@ export const Img: React.FC<ImgProps> = ({
   onError,
   loading,
   blurDataURL,
-  srcset,
   ratio = 0
 }) => {
 
@@ -55,5 +53,6 @@ export const Img: React.FC<ImgProps> = ({
     [Styles[`${ratioName}`]]: true,
   });
 
-  return <Image src={src} width={width} height={height} alt={desc} loader={loader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingComplete={onLoadingComplete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} srcset={srcset} ratio={ratio} />
+  // Follow attribute image component (nextjs)
+  return <Image className={imgStyle} src={src} width={width} height={height} alt={desc} loader={loader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingCompete={onLoadingCompete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} />
 };

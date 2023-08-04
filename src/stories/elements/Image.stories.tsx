@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { eSize, aspectRatio } from '@/utils/types';
 import { ImgProps, Img } from '@/elements/Image';
-import { ImgDemo } from './../assets/code-brackets.svg';
+// import { ImgDemo } from 'https://picsum.photos/seed/picsum/200/300';
 
 const meta: Meta<typeof Img> = {
   title: 'elements/Img',
@@ -23,20 +23,20 @@ type Story = StoryObj<typeof Img>;
 // Theme: Default
 export const Default: Story = {
   args: {
-    src: ImgDemo,
-    // width,
-    // height,
+    src: 'https://picsum.photos/seed/picsum/200/300',
+    width: 200,
+    height: 300,
     // desc,
     // loader,
     // fill,
-    sizes: 3,
+    // sizes: 3,
     // quality,
     // priority,
     // placeholder,
     // onLoadingCompete,
     // onLoad,
     // onError,
-    // loading,
+    loading: 'lazy',
     // blurDataURL,
     // srcset,
     ratio: 0
@@ -56,13 +56,13 @@ export const Primary: Story = {
 }
 
 // Size: H1
-export const H1: Story = {
-  args: {
-    ...Default.args
-  },
-  argTypes: {
-    size: {
-      control: false,
-    },
-  },
-}
+// export const H1: Story = {
+//   args: {
+//     ...Default.args
+//   },
+//   argTypes: {
+//     size: {
+//       control: false,
+//     },
+//   },
+// }
