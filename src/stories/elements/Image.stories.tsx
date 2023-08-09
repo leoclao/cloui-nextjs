@@ -26,9 +26,9 @@ export const Default: Story = {
     src: 'https://picsum.photos/seed/picsum/200/300',
     width: 200,
     height: 300,
-    // desc,
+    desc: 'Detailed description for this image',
     // loader,
-    // fill,
+    fill: false,
     // sizes: 3,
     // quality,
     // priority,
@@ -39,7 +39,8 @@ export const Default: Story = {
     loading: 'lazy',
     // blurDataURL,
     // srcset,
-    ratio: 0
+    ratio: 0,
+    figcaption: false,
   },
 }
 
@@ -48,11 +49,11 @@ export const Primary: Story = {
   args: {
     ...Default.args
   },
-  argTypes: {
-    size: {
-      control: false,
-    }
-  }
+  // argTypes: {
+  //   size: {
+  //     control: false,
+  //   }
+  // }
 }
 
 // Size: H1

@@ -2,6 +2,19 @@
   font-size: 1rem;
 }
 
+.figure {
+  display: inline-block;
+  width: auto;
+
+}
+
+.figcaption {
+  font-style: italic;
+  background-color: whitesmoke;
+  color: gray;
+  padding: 8px 16px;
+}
+
 .Ratio {
   &Auto {
     // auto
