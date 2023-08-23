@@ -41,8 +41,8 @@ const Button: React.FC<ButtonProps> = ({
 
   const btnClass = cx({
     C: true,
-    [Styles[${btnThemeName}]]: checkValue(theme),
-    [Styles[${btnSizeName}]]: checkValue(size),
+    [Styles[`${btnThemeName}`]]: checkValue(theme),
+    [Styles[`${btnSizeName}`]]: checkValue(size),
     customStyle: checkValue(customStyle),
   });
 
@@ -62,4 +62,4 @@ const Button: React.FC<ButtonProps> = ({
   )
 }
 
-export default
+export default Button

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames/bind";
-import { eSize, aspectRatio } from "@/utils/types";
+import { aspectRatio } from "@/utils/types";
 import { getKeyByValue, checkValue } from "@/utils/function";
 
 import Styles from '@/styles/modules/Img.module.scss'
