@@ -1,13 +1,14 @@
 /** @type { import("eslint").Linter.FlatConfig[] } */
 import React from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
 import airbnb from "eslint-config-airbnb";
+import stylelint from "eslint-config-stylelint";
+import reactHooks from "eslint-plugin-react-hooks";
+import imports from "eslint-plugin-import";
+import markdown from "eslint-plugin-markdown";
 import tsEs from "@typescript-eslint/eslint-plugin";
 import tsEsParser from "@typescript-eslint/parser";
-// import imports from "eslint-plugin-import";
 import * as globals from "globals";
 import prettier from "prettier";
-import markdown from "eslint-plugin-markdown";
 
 export default [
   // Global config
@@ -21,6 +22,7 @@ export default [
       reactHooks,
       tsEs,
       prettier,
+      stylelint,
     },
     languageOptions: {
       sourceType: "module",
