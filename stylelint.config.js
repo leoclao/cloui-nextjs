@@ -1,4 +1,5 @@
-{
+/** @type {import("stylelint").Config} */
+const slConfig = {
   "processors": ["stylelint-processor-styled-components"],
   "plugins": ["stylelint-a11y"],
   "rules": {
@@ -21,3 +22,5 @@
     "stylelint-config-prettier"
   ]
 }
+
+export default slConfig;
