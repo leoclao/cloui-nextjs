@@ -14,7 +14,8 @@
     "lint:style": "stylelint 'src/**/styled.ts' 'src/**/*.tsx'",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|md|mdx)\"",
     "sb": "storybook dev -p 6006",
-    "build-sb": "storybook build"
+    "build-sb": "storybook build",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -30,14 +31,7 @@
     }
   },
   "dependencies": {
-    "@storybook/addon-essentials": "^7.3.2",
-    "@storybook/addon-interactions": "^7.3.2",
-    "@storybook/addon-links": "^7.3.2",
-    "@storybook/blocks": "^7.3.2",
-    "@storybook/nextjs": "^7.3.2",
-    "@storybook/react": "^7.3.2",
-    "@storybook/testing-library": "^0.2.0",
-    "@types/node": "20.5.4",
+    "@types/node": "20.5.6",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
@@ -69,7 +63,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.66.1",
-    "storybook": "^7.3.2",
     "stylelint": "^15.10.3",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-prettier": "^9.0.5",
@@ -78,8 +71,17 @@
     "stylelint-prettier": "^4.0.2",
     "stylelint-processor-styled-components": "^1.10.0",
     "swiper": "^10.2.0",
-    "typescript": "5.1.6",
-    "url": "^0.11.1",
-    "uuid": "^9.0.0"
+    "typescript": "5.2.2",
+    "url": "^0.11.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.3.2",
+    "@storybook/addon-interactions": "^7.3.2",
+    "@storybook/addon-links": "^7.3.2",
+    "@storybook/blocks": "^7.3.2",
+    "@storybook/nextjs": "^7.3.2",
+    "@storybook/react": "^7.3.2",
+    "@storybook/testing-library": "^0.2.0",
+    "storybook": "^7.3.2"
   }
 }
