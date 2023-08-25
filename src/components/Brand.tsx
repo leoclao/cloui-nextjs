@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import classNames from 'classnames/bind';
-import eSize from '@/utils/types';
-import { checkValue, getKeyByValue } from '@/utils/function';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import classNames from "classnames/bind";
+import eSize from "@/utils/types";
+import { checkValue, getKeyByValue } from "@/utils/function";
 
-import Styles from '@/styles/modules/Brand.module.scss';
+import Styles from "@/styles/modules/Brand.module.scss";
 
 const cx = classNames.bind(Styles);
 

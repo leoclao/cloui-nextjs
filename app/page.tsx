@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { Title } from '@/elements/Title';
-import { Label } from '@/elements/Label';
-import { Metered } from '@/elements/Metered';
-import { Img } from '@/elements/Image';
+import Image from "next/image";
+import { Title } from "elements/Title";
+import { Label } from "elements/Label";
+import { Metered } from "elements/Metered";
+// import { Img } from 'elements/Image';
 // import { ImgDemo } from '/vercel.svg';
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -45,9 +45,10 @@ export default function Home() {
       </div>
 
       <div>
-        <Title theme={0} size={0} title={'Test title element ->'} />
-        <Label text={'Label'} size={3} />
-        <Metered geo={0}
+        <Title theme={0} size={0} title={"Test title element ->"} />
+        <Label text={"Label"} size={3} />
+        <Metered
+          geo={0}
           icon="fa fa-time"
           size={2}
           status={0}
@@ -55,7 +56,7 @@ export default function Home() {
           timer={40}
           vertical
         />
-        <Img src={'https://picsum.photos/id/237/200/300'} />
+        {/* <Img src={'https://picsum.photos/id/237/200/300'} /> */}
       </div>
       <div className={styles.grid}>
         <a

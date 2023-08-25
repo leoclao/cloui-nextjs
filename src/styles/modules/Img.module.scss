@@ -5,7 +5,6 @@
 .figure {
   display: inline-block;
   width: auto;
-
 }
 
 .figcaption {
@@ -36,7 +35,7 @@
     // 21:9
     aspect-ratio: 21 / 9;
   }
-  &SuperUltraWide { 
+  &SuperUltraWide {
     // 32:9
     aspect-ratio: 32 / 9;
   }

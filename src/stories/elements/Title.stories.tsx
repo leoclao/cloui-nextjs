@@ -1,19 +1,19 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { eTheme } from '@/utils/types';
-import { titleSize, TitleProps, Title } from '@/elements/Title';
+import { Meta, StoryObj } from "@storybook/react";
+import { eTheme } from "@/utils/types";
+import { titleSize, TitleProps, Title } from "@/elements/Title";
 
 const meta: Meta<typeof Title> = {
-  title: 'elements/Title',
+  title: "elements/Title",
   component: Title,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {
-        component: 'Title description',
+        component: "Title description",
       },
-    }
-  }
-}
+    },
+  },
+};
 
 export default meta;
 
@@ -22,11 +22,11 @@ type Story = StoryObj<typeof Title>;
 // Theme: Default
 export const Default: Story = {
   args: {
-    title: 'Title',
+    title: "Title",
     size: 2,
-    theme: 0
+    theme: 0,
   },
-}
+};
 
 // Theme: Primary
 export const Primary: Story = {
@@ -40,9 +40,9 @@ export const Primary: Story = {
     },
     theme: {
       control: false,
-    }
-  }
-}
+    },
+  },
+};
 
 // Theme: Secondary
 export const Secondary: Story = {
@@ -56,9 +56,9 @@ export const Secondary: Story = {
     },
     theme: {
       control: false,
-    }
-  }
-}
+    },
+  },
+};
 
 // Theme: Tertiary
 export const Tertiary: Story = {
@@ -71,7 +71,7 @@ export const Tertiary: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: H1
 export const H1: Story = {
@@ -84,7 +84,7 @@ export const H1: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: H2
 export const H2: Story = {
@@ -94,8 +94,8 @@ export const H2: Story = {
   },
   argTypes: {
     ...H1.argTypes,
-  }
-}
+  },
+};
 
 // Size: H3
 export const H3: Story = {
@@ -105,8 +105,8 @@ export const H3: Story = {
   },
   argTypes: {
     ...H1.argTypes,
-  }
-}
+  },
+};
 
 // Size: H4
 export const H4: Story = {
@@ -116,8 +116,8 @@ export const H4: Story = {
   },
   argTypes: {
     ...H1.argTypes,
-  }
-}
+  },
+};
 
 // Size: H5
 export const H5: Story = {
@@ -127,8 +127,8 @@ export const H5: Story = {
   },
   argTypes: {
     ...H1.argTypes,
-  }
-}
+  },
+};
 
 // Size: H6
 export const H6: Story = {
@@ -138,5 +138,5 @@ export const H6: Story = {
   },
   argTypes: {
     ...H1.argTypes,
-  }
-}
+  },
+};

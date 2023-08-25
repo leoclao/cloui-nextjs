@@ -10,15 +10,15 @@ export function getKeyByValue(eObj: any, value: any): string | undefined {
 
 // Check value
 export function checkValue(value: any): boolean {
-  if(value === 0) {
+  if (value === 0) {
     return true;
-  } else if (typeof value === 'string' && value.length > 0) {
+  } else if (typeof value === "string" && value.length > 0) {
     return true;
   } else if (Array.isArray(value) && value.length > 0) {
     return true;
-  } else if (typeof value === 'object' && Object.keys(value).length > 0) {
+  } else if (typeof value === "object" && Object.keys(value).length > 0) {
     return true;
-  } else if (typeof value === 'boolean' && value === true) {
+  } else if (typeof value === "boolean" && value === true) {
     return true;
   }
   return false;

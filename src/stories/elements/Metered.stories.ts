@@ -1,19 +1,19 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { eTheme, eSize, eMessage, eGeometry } from '@/utils/types';
-import { MeteredProps, Metered } from '@/elements/Metered';
+import { Meta, StoryObj } from "@storybook/react";
+import { eTheme, eSize, eMessage, eGeometry } from "@/utils/types";
+import { MeteredProps, Metered } from "@/elements/Metered";
 
 const meta: Meta<typeof Metered> = {
-  title: 'elements/Metered',
+  title: "elements/Metered",
   component: Metered,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {
-        component: 'Metered description',
+        component: "Metered description",
       },
-    }
-  }
-}
+    },
+  },
+};
 
 export default meta;
 
@@ -22,7 +22,7 @@ type Story = StoryObj<typeof Metered>;
 // Theme: Default
 export const Default: Story = {
   args: {
-    icon: 'fa fa-time',
+    icon: "fa fa-time",
     size: 2,
     theme: 0,
     status: 0,
@@ -30,7 +30,7 @@ export const Default: Story = {
     geometry: 0,
     // vertical: false,
   },
-}
+};
 
 // Theme: Primary
 export const Primary: Story = {
@@ -44,9 +44,9 @@ export const Primary: Story = {
     },
     theme: {
       control: false,
-    }
-  }
-}
+    },
+  },
+};
 
 // Theme: Secondary
 export const Secondary: Story = {
@@ -60,9 +60,9 @@ export const Secondary: Story = {
     },
     theme: {
       control: false,
-    }
-  }
-}
+    },
+  },
+};
 
 // Theme: Tertiary
 export const Tertiary: Story = {
@@ -75,7 +75,7 @@ export const Tertiary: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: Tiny
 export const Tiny: Story = {
@@ -88,7 +88,7 @@ export const Tiny: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: Smaller
 export const Smaller: Story = {
@@ -98,8 +98,8 @@ export const Smaller: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Small
 export const Small: Story = {
@@ -109,8 +109,8 @@ export const Small: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Medium
 export const Medium: Story = {
@@ -120,8 +120,8 @@ export const Medium: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Large
 export const Large: Story = {
@@ -131,8 +131,8 @@ export const Large: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XLarge
 export const XLarge: Story = {
@@ -142,8 +142,8 @@ export const XLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXLarge
 export const XXLarge: Story = {
@@ -153,8 +153,8 @@ export const XXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXXLarge
 export const XXXLarge: Story = {
@@ -164,8 +164,8 @@ export const XXXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Big
 export const Big: Story = {
@@ -175,8 +175,8 @@ export const Big: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Huge
 export const Huge: Story = {
@@ -186,5 +186,5 @@ export const Huge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
