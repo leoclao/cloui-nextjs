@@ -1,10 +1,10 @@
 import React, { ButtonHTMLAttributes } from "react";
 import classNames from "classnames/bind";
 
-import { eTheme, eSize } from '@/utils/types';
-import { checkValue, getKeyByValue } from '@/utils/function';
+import { eTheme, eSize } from "@/utils/types";
+import { checkValue, getKeyByValue } from "@/utils/function";
 
-import Styles from '@/styles/modules/Button.module.scss';
+import Styles from "@/styles/modules/Button.module.scss";
 
 const cx = classNames.bind(Styles);
 
@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string;
   size?: eSize;
   theme?: eTheme;
-  rounded?: eSize | 'Full';
+  rounded?: eSize | "Full";
   vertical?: boolean;
   hollow?: boolean;
   disabled?: boolean;
@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
   iconRight,
   ...props
 }) => {
-  const btnThemeName = getKeyByValue(eTheme, theme) + (hollow && 'Hollow');
+  const btnThemeName = getKeyByValue(eTheme, theme) + (hollow && "Hollow");
   const btnSizeName = getKeyByValue(eSize, theme);
 
   const btnClass = cx({
@@ -49,7 +49,7 @@ const Button: React.FC<ButtonProps> = ({
   const [isDisabled, setIsDisabled] = useState(disabled);
 
   return (
-    <button 
+    <button
       className={btnClass}
       disabled={isDisabled}
       aria-disabled={checkValue(isDisabled)}
@@ -59,7 +59,7 @@ const Button: React.FC<ButtonProps> = ({
       {label && <span className={}>{label}</span>}
       {iconRight}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

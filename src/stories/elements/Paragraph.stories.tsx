@@ -1,19 +1,19 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { eTheme, eSize } from '@/utils/types';
-import { ParagraphProps, Paragraph } from '@/elements/Paragraph';
+import { Meta, StoryObj } from "@storybook/react";
+import { eTheme, eSize } from "@/utils/types";
+import { ParagraphProps, Paragraph } from "@/elements/Paragraph";
 
 const meta: Meta<typeof Paragraph> = {
-  title: 'elements/Paragraph',
+  title: "elements/Paragraph",
   component: Paragraph,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {
-        component: 'Paragraph'
+        component: "Paragraph",
       },
     },
-  }
-}
+  },
+};
 
 export default meta;
 
@@ -22,11 +22,11 @@ type Story = StoryObj<typeof Paragraph>;
 // Theme: Default
 export const Default: Story = {
   args: {
-    content: 'Paragraph',
+    content: "Paragraph",
     size: 3,
-    theme: 0
+    theme: 0,
   },
-}
+};
 
 // Theme: Primary
 export const Primary: Story = {
@@ -36,9 +36,9 @@ export const Primary: Story = {
   argTypes: {
     theme: {
       control: false,
-    }
-  }
-}
+    },
+  },
+};
 
 // Theme: Secondary
 export const Secondary: Story = {
@@ -47,9 +47,9 @@ export const Secondary: Story = {
     theme: 1,
   },
   argTypes: {
-    ...Primary.argTypes
-  }
-}
+    ...Primary.argTypes,
+  },
+};
 
 // Theme: Tertiary
 export const Tertiary: Story = {
@@ -58,9 +58,9 @@ export const Tertiary: Story = {
     theme: 2,
   },
   argTypes: {
-    ...Primary.argTypes
-  }
-}
+    ...Primary.argTypes,
+  },
+};
 
 // Size: Tiny
 export const Tiny: Story = {
@@ -73,7 +73,7 @@ export const Tiny: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: Smaller
 export const Smaller: Story = {
@@ -83,8 +83,8 @@ export const Smaller: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Small
 export const Small: Story = {
@@ -94,8 +94,8 @@ export const Small: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Medium
 export const Medium: Story = {
@@ -105,8 +105,8 @@ export const Medium: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Large
 export const Large: Story = {
@@ -116,8 +116,8 @@ export const Large: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XLarge
 export const XLarge: Story = {
@@ -127,8 +127,8 @@ export const XLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXLarge
 export const XXLarge: Story = {
@@ -138,8 +138,8 @@ export const XXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXXLarge
 export const XXXLarge: Story = {
@@ -149,8 +149,8 @@ export const XXXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Big
 export const Big: Story = {
@@ -160,8 +160,8 @@ export const Big: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Huge
 export const Huge: Story = {
@@ -171,5 +171,5 @@ export const Huge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};

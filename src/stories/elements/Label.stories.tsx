@@ -1,15 +1,15 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { eTheme, eSize } from '@/utils/types';
-import { LabelProps, Label } from '@/elements/Label';
+import { Meta, StoryObj } from "@storybook/react";
+import { eTheme, eSize } from "@/utils/types";
+import { LabelProps, Label } from "@/elements/Label";
 
 const meta: Meta<typeof Label> = {
-  title: 'elements/Label',
+  title: "elements/Label",
   component: Label,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {
-        component: 'Label description',
+        component: "Label description",
       },
     },
   },
@@ -42,7 +42,7 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {
   args: {
-    text: 'Label',
+    text: "Label",
     size: 3,
   },
   // argTypes: {
@@ -53,7 +53,7 @@ export const Default: Story = {
   //     control: false,
   //   },
   // }
-}
+};
 
 // Theme: Primary
 export const Primary: Story = {
@@ -96,7 +96,7 @@ export const Tertiary: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: Tiny
 export const Tiny: Story = {
@@ -109,7 +109,7 @@ export const Tiny: Story = {
       control: false,
     },
   },
-}
+};
 
 // Size: Smaller
 export const Smaller: Story = {
@@ -119,8 +119,8 @@ export const Smaller: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Small
 export const Small: Story = {
@@ -130,8 +130,8 @@ export const Small: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Medium
 export const Medium: Story = {
@@ -141,8 +141,8 @@ export const Medium: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Large
 export const Large: Story = {
@@ -152,8 +152,8 @@ export const Large: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XLarge
 export const XLarge: Story = {
@@ -163,8 +163,8 @@ export const XLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXLarge
 export const XXLarge: Story = {
@@ -174,8 +174,8 @@ export const XXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: XXXLarge
 export const XXXLarge: Story = {
@@ -185,8 +185,8 @@ export const XXXLarge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Big
 export const Big: Story = {
@@ -196,8 +196,8 @@ export const Big: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};
 
 // Size: Huge
 export const Huge: Story = {
@@ -207,5 +207,5 @@ export const Huge: Story = {
   },
   argTypes: {
     ...Tiny.argTypes,
-  }
-}
+  },
+};

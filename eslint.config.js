@@ -25,91 +25,90 @@ export default [
       stylelint,
     },
     languageOptions: {
-      sourceType: "module",
       ecmaVersion: "latest",
       parser: tsEsParser,
       parserOptions: {
+        sourceType: "module",
         requireConfigFile: false,
         ecmaFeatures: {
           jsx: true,
+          tsx: true,
         },
         project: "./tsconfig.json",
         env: {
           browser: true,
           node: true,
-        }
+        },
       },
       globals: {
-        ...globals.browser
-      }
+        ...globals.browser,
+      },
     },
     linterOptions: {
       noInlineConfig: true,
       reportUnusedDisableDirectives: true,
     },
-    ignores: [
-      "node_modules/*",
-      "/build/",
-      "/dist/",
-      "next",
-    ],
+    ignores: ["node_modules/*", "/build/", "/dist/", "next"],
     rules: {
       semi: ["warn", "always"],
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_" },
+      ],
       "@typescript-eslint/ban-ts-comment": [
         "error",
         {
           "ts-expect-error": false,
           "ts-ignore": false,
           "ts-nocheck": false,
-          "ts-check": false
-        }
+          "ts-check": false,
+        },
       ],
       "@typescript-eslint/no-var-requires": 0,
       "@typescript-eslint/ban-types": [
         "error",
         {
-          "types": {
+          types: {
             "{}": false,
             object: false,
-            Object: false
-          }
-        }
+            Object: false,
+          },
+        },
       ],
       "@typescript-eslint/explicit-function-return-type": [
         2,
         {
           allowExpressions: true,
-          allowTypedFunctionExpressions: true
-        }
+          allowTypedFunctionExpressions: true,
+        },
       ],
       "@typescript-eslint/no-use-before-define": [
         2,
         {
           functions: false,
           classes: true,
-          variables: true
-        }
+          variables: true,
+        },
       ],
       "@typescript-eslint/no-empty-function": [
         2,
         {
-          allow: ["arrowFunctions"]
-        }
+          allow: ["arrowFunctions"],
+        },
       ],
       "@typescript-eslint/no-empty-interface": [
         2,
         {
-          allowSingleExtends: true
-        }
+          allowSingleExtends: true,
+        },
       ],
       "@typescript-eslint/camelcase": [
         2,
         {
-          properties: "never"
-        }
+          properties: "never",
+        },
       ],
       "@typescript-eslint/ban-ts-ignore": [0],
       "@typescript-eslint/ban-ts-comment": [0],
@@ -119,13 +118,16 @@ export default [
       "@typescript-eslint/no-inferrable-types": [0],
       "@typescript-eslint/no-empty-function": [0],
       "@typescript-eslint/no-this-alias": [0],
-      "@typescript-eslint/no-unused-vars-experimental":[2,{"ignoreArgsIfArgsAfterAreUsed" :true}],
+      "@typescript-eslint/no-unused-vars-experimental": [
+        2,
+        { ignoreArgsIfArgsAfterAreUsed: true },
+      ],
     },
     settings: {
       react: {
         version: "detect",
-      }
-    }
+      },
+    },
   },
   // Markdown config
   {
@@ -139,6 +141,6 @@ export default [
     },
     settings: {
       sharedData: "Hello",
-    }
+    },
   },
-]
+];

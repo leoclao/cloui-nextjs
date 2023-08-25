@@ -32,13 +32,13 @@ export enum aspectRatio {
   Television, // 4:3
   Video, // 16:9
   UltraWide, // 21:9
-  SuperUltraWide // 32:9
+  SuperUltraWide, // 32:9
 }
 
 // Enum: Direction
 export enum eDirection {
   Vertical,
-  Horizontal
+  Horizontal,
 }
 
 // Enum Geometry
@@ -56,7 +56,7 @@ export enum eState {
   Invalid,
   Confirmed,
   Unconfirmed,
-  Disabled
+  Disabled,
 }
 
 // Enum: messages
@@ -66,7 +66,7 @@ export enum eMessage {
   Loading,
   Success,
   Warning,
-  Error
+  Error,
 }
 
 // Enum: errors
@@ -76,5 +76,5 @@ export enum eError {
   Mismatch,
   Length, // Too short or too long
   Invalid,
-  Submission
+  Submission,
 }

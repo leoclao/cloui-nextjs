@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames/bind";
-import { aspectRatio } from "@/utils/types";
-import { getKeyByValue, checkValue } from "@/utils/function";
+import { aspectRatio } from "utils/types";
+import { getKeyByValue, checkValue } from "utils/function";
 
-import Styles from '@/styles/modules/Img.module.scss'
+import Styles from "styles/modules/Img.module.scss";
 
 const cx = classNames(Styles);
 
@@ -22,13 +22,13 @@ export interface ImgProps {
   onLoadingCompete?: Function;
   onLoad?: Function;
   onError?: Function;
-  loading?: string
+  loading?: string;
   blurDataURL?: string;
   ratio?: aspectRatio;
   figcaption?: boolean;
 }
 
-const assets = 'https://cloui.com/assets/';
+const assets = "https://cloui.com/assets/";
 
 // const handleLoadingCompleted = () => {
 //   console.log('Image has finished loading');
@@ -48,16 +48,17 @@ export const Img: React.FC<ImgProps> = ({
   onLoadingCompete, // Follow attribute image component (nextjs)
   onLoad, // Follow attribute image component (nextjs)
   onError, // Follow attribute image component (nextjs)
-  loading = 'lazy', // Follow attribute image component (nextjs)
+  loading = "lazy", // Follow attribute image component (nextjs)
   blurDataURL, // Follow attribute image component (nextjs)
   ratio = 0,
   figcaption,
 }) => {
-
   // const [loaded, setLoaded] = useState(false);
 
   const getRatioValue = getKeyByValue(aspectRatio, ratio);
-  const ratioName = checkValue(getRatioValue) ? `Ratio${getRatioValue}` : 'Auto'
+  const ratioName = checkValue(getRatioValue)
+    ? `Ratio${getRatioValue}`
+    : "Auto";
 
   const figureClass = classNames(Styles.figure);
   const figcaptionClass = classNames(Styles.figcaption);
@@ -66,20 +67,56 @@ export const Img: React.FC<ImgProps> = ({
     [Styles[`${ratioName}`]]: true,
   });
 
-  const isLocal = src.startsWith('/');
-  const isExternal = src.startsWith('http') || src.startsWith('https');
+  const isLocal = src.startsWith("/");
+  const isExternal = src.startsWith("http") || src.startsWith("https");
 
   const imageLoader = ({ src, width, quality }) => {
     let newImgAssets = null;
     if (isLocal) newImgAssets = `${assets}${src}?w=${width}&q=${quality || 75}`;
     if (isExternal) newImgAssets = `${src}?w=${width}&q=${quality || 75}`;
     return newImgAssets;
-  }
+  };
 
-  const imgNone = <Image className={imgClass} src={src} width={width} height={height} alt={desc} loader={imageLoader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingCompete={onLoadingCompete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} />;
+  const imgNone = (
+    <Image
+      className={imgClass}
+      src={src}
+      width={width}
+      height={height}
+      alt={desc}
+      loader={imageLoader}
+      fill={fill}
+      sizes={sizes}
+      quality={quality}
+      priority={priority}
+      placeholder={placeholder}
+      onLoadingCompete={onLoadingCompete}
+      onLoad={onLoad}
+      onError={onError}
+      loading={loading}
+      blurDataURL={blurDataURL}
+    />
+  );
   const imgFigcaption = (
     <figure className={figureClass}>
-      <Image className={imgClass} src={src} width={width} height={height} alt={desc} loader={imageLoader} fill={fill} sizes={sizes} quality={quality} priority={priority} placeholder={placeholder} onLoadingCompete={onLoadingCompete} onLoad={onLoad} onError={onError} loading={loading} blurDataURL={blurDataURL} />
+      <Image
+        className={imgClass}
+        src={src}
+        width={width}
+        height={height}
+        alt={desc}
+        loader={imageLoader}
+        fill={fill}
+        sizes={sizes}
+        quality={quality}
+        priority={priority}
+        placeholder={placeholder}
+        onLoadingCompete={onLoadingCompete}
+        onLoad={onLoad}
+        onError={onError}
+        loading={loading}
+        blurDataURL={blurDataURL}
+      />
       {desc && <figcaption className={figcaptionClass}>{desc}</figcaption>}
     </figure>
   );

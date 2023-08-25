@@ -1,9 +1,5 @@
 {
-  "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\elements"
-  ],
+  "ExpandedNodes": ["", "\\src", "\\src\\elements"],
   "SelectedNode": "\\src\\elements\\Metered.tsx",
   "PreviewInSolutionExplorer": false
 }
