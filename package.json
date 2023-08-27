@@ -8,6 +8,7 @@
     "test": "dotenv -e .env.test next test",
     "build": "next build",
     "start": "dotenv -e .env.production next start",
+    "cypress": "cypress open",
     "lint": "npm run lint:es && npm run lint:style",
     "lint:es": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -81,6 +82,7 @@
     "@storybook/nextjs": "^7.3.2",
     "@storybook/react": "^7.3.2",
     "@storybook/testing-library": "^0.2.0",
+    "cypress": "^12.17.4",
     "storybook": "^7.3.2"
   }
 }
