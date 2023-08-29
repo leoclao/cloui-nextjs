@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames/bind";
-import { aspectRatio } from "utils/types";
-import { getKeyByValue, checkValue } from "utils/function";
+import { aspectRatio } from "@/utils/types";
+import { getKeyByValue, checkValue } from "@/utils/function";
 
-import Styles from "styles/modules/Img.module.scss";
+import Styles from "@/styles/modules/Img.module.scss";
 
 const cx = classNames(Styles);
 

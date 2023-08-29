@@ -3,7 +3,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.js",
-    "test/**/*.ts",
+    "src/test/**/*.ts",
     ".eslint.config.js",
     "**/*.ts",
     "**/*.tsx"

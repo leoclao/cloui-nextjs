@@ -1,10 +1,10 @@
 // 'use client';
 import React from "react";
 import classNames from "classnames/bind";
-import { eTheme, eSize } from "utils/types";
-import { checkValue, getKeyByValue } from "utils/function";
+import { eTheme, eSize } from "@/utils/types";
+import { checkValue, getKeyByValue } from "@/utils/function";
 
-import Styles from "styles/modules/Label.module.scss";
+import Styles from "@/styles/modules/Label.module.scss";
 
 const cx = classNames.bind(Styles);
 
