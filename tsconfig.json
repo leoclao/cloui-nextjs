@@ -22,21 +22,21 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src",
+    "baseUrl": "src/",
     "paths": {
-      // "@/*": ["src/*"],
-      "app/*": ["app/*"],
-      "components/*": ["components/*"],
-      "elements/*": ["elements/*"],
-      "styles/*": ["styles/*"],
-      "utils/*": ["utils/*"]
+      // "@/*": ["./src/*"],
+      // "@/app/*": ["app/*"],
+      "@/components/*": ["components/*"],
+      "@/elements/*": ["elements/*"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.mts",
-    "**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.mts",
+    "./src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

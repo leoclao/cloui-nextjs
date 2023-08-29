@@ -8,8 +8,28 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "program": "${file}"
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2.cloui-nextjs",
+      "request": "launch",
+      "args": [
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "/Users/nhutdao/FE/CLO/cloui-nextjs",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "program": "/Users/nhutdao/FE/CLO/cloui-nextjs/node_modules/.bin/jest"
     }
   ]
 }

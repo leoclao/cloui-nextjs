@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Title } from "elements/Title";
-import { Label } from "elements/Label";
-import { Metered } from "elements/Metered";
+import { Title } from "@/elements/Title";
+import { Label } from "@/elements/Label";
+import { Metered } from "@/elements/Metered";
 // import { Img } from 'elements/Image';
 // import { ImgDemo } from '/vercel.svg';
-import styles from "./page.module.css";
+import styles from "@/styles/modules/Page.module.scss";
 
 export default function Home() {
   return (
