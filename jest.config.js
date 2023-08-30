@@ -9,10 +9,18 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const customJestConfig = {
   // Add more setup options before each test is run
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
- 
-  testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
+  moduleNameMapper: {
+    '\\.(scss|sass)$': 'identity-obj-proxy',
+    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/elements/(.*)$': '<rootDir>/elements/$1',
+    '^@/styles/(.*)$': '<rootDir>/styles/$1',
+    '^@/utils/(.*)$': '<rootDir>/utils/$1',
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
 };
  
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
