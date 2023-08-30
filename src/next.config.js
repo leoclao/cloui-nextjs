@@ -44,7 +44,7 @@ export default {
     // },
     relay: {
       // This should match relay.config.js
-      src: './',
+      src: './src',
       artifactDirectory: './__generated__',
       language: 'typescript',
       eagerEsModules: false,
