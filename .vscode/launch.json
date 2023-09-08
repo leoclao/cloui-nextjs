@@ -15,7 +15,7 @@
     },
     {
       "type": "node",
-      "name": "vscode-jest-tests.v2.cloui-nextjs",
+      "name": "vscode-jest-tests.v2.cloui-nextjs-1694079902672",
       "request": "launch",
       "args": [
         "--runInBand",
@@ -30,6 +30,46 @@
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
       "program": "/Users/nhutdao/FE/CLO/cloui-nextjs/node_modules/.bin/jest"
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2.cloui-nextjs-1694167128940",
+      "request": "launch",
+      "args": [
+        "test",
+        "--",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "/Users/nhutdao/FE/CLO/cloui-nextjs",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "runtimeExecutable": "npm"
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests.v2.cloui-nextjs",
+      "request": "launch",
+      "args": [
+        "test",
+        "--",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ],
+      "cwd": "/Users/nhutdao/FE/CLO/cloui-nextjs",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "runtimeExecutable": "npm"
     }
   ]
 }

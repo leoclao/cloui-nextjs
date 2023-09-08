@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, useState } from "react";
 import classNames from "classnames/bind";
 
 import { eTheme, eSize } from "@/utils/types";
@@ -25,8 +25,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   label,
   title,
-  size,
-  theme,
+  size = 3,
+  theme = 0,
   rounded,
   vertical = false,
   hollow = false,
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const btnThemeName = getKeyByValue(eTheme, theme) + (hollow && "Hollow");
-  const btnSizeName = getKeyByValue(eSize, theme);
+  const btnSizeName = getKeyByValue(eSize, size);
 
   const btnClass = cx({
     C: true,
@@ -56,7 +56,8 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {iconLeft}
-      {label && <span className={}>{label}</span>}
+      {/* {label && <span className={}>{label}</span>} */}
+      {label && <span>{label}</span>}
       {iconRight}
     </button>
   );

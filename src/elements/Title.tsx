@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "classnames/bind";
-import { eTheme } from "utils/types";
-import { checkValue, getKeyByValue } from "utils/function";
+import { eTheme } from "@/utils/types";
+import { checkValue, getKeyByValue } from "@/utils/function";
 
-import Styles from "styles/modules/Title.module.scss";
+import Styles from "@/styles/modules/Title.module.scss";
 
 const cx = classNames.bind(Styles);
 
@@ -23,7 +23,7 @@ export interface TitleProps {
   theme?: eTheme;
 }
 
-export const Title: React.FC<TitleProps> = ({ title, size, theme }) => {
+export const Title: React.FC<TitleProps> = ({ title, size = 3, theme = 0 }) => {
   const themeName = getKeyByValue(eTheme, theme);
   const sizeName = getKeyByValue(titleSize, size);
   const style = cx({

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactEventHandler } from "react";
 import Image from "next/image";
 import classNames from "classnames/bind";
 import { aspectRatio } from "@/utils/types";
@@ -6,7 +6,8 @@ import { getKeyByValue, checkValue } from "@/utils/function";
 
 import Styles from "@/styles/modules/Img.module.scss";
 
-const cx = classNames(Styles);
+type OnLoadingComplete = (img: HTMLImageElement) => void;
+const cx = classNames.bind(Styles);
 
 export interface ImgProps {
   src: string;
@@ -18,11 +19,11 @@ export interface ImgProps {
   sizes?: string; //"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
   quality?: number;
   priority?: boolean;
-  placeholder?: string;
-  onLoadingCompete?: Function;
-  onLoad?: Function;
-  onError?: Function;
-  loading?: string;
+  placeholder?: "empty" | "blur" | "data:image/...";
+  onLoadingComplete?: OnLoadingComplete | undefined;
+  onLoad?: ReactEventHandler<HTMLImageElement> | undefined;
+  onError?: ReactEventHandler<HTMLImageElement> | undefined;
+  loading?: "lazy" | "eager" | undefined;
   blurDataURL?: string;
   ratio?: aspectRatio;
   figcaption?: boolean;
@@ -45,7 +46,7 @@ export const Img: React.FC<ImgProps> = ({
   quality, // Follow attribute image component (nextjs)
   priority, // Follow attribute image component (nextjs)
   placeholder, // Follow attribute image component (nextjs)
-  onLoadingCompete, // Follow attribute image component (nextjs)
+  onLoadingComplete, // Follow attribute image component (nextjs)
   onLoad, // Follow attribute image component (nextjs)
   onError, // Follow attribute image component (nextjs)
   loading = "lazy", // Follow attribute image component (nextjs)
@@ -59,19 +60,19 @@ export const Img: React.FC<ImgProps> = ({
   const ratioName = checkValue(getRatioValue)
     ? `Ratio${getRatioValue}`
     : "Auto";
+  const figureClass = cx({figure: true});
+  const figcaptionClass = cx({figcaption: true});
 
-  const figureClass = classNames(Styles.figure);
-  const figcaptionClass = classNames(Styles.figcaption);
-
-  const imgClass = classNames(Styles.C, {
+  const imgClass = cx({
+    C: true,
     [Styles[`${ratioName}`]]: true,
   });
 
   const isLocal = src.startsWith("/");
   const isExternal = src.startsWith("http") || src.startsWith("https");
 
-  const imageLoader = ({ src, width, quality }) => {
-    let newImgAssets = null;
+  const imageLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }): string => {
+    let newImgAssets:string = ''; // Khởi tạo với giá trị mặc định là chuỗi rỗng
     if (isLocal) newImgAssets = `${assets}${src}?w=${width}&q=${quality || 75}`;
     if (isExternal) newImgAssets = `${src}?w=${width}&q=${quality || 75}`;
     return newImgAssets;
@@ -90,7 +91,7 @@ export const Img: React.FC<ImgProps> = ({
       quality={quality}
       priority={priority}
       placeholder={placeholder}
-      onLoadingCompete={onLoadingCompete}
+      onLoadingComplete={onLoadingComplete}
       onLoad={onLoad}
       onError={onError}
       loading={loading}
@@ -99,24 +100,7 @@ export const Img: React.FC<ImgProps> = ({
   );
   const imgFigcaption = (
     <figure className={figureClass}>
-      <Image
-        className={imgClass}
-        src={src}
-        width={width}
-        height={height}
-        alt={desc}
-        loader={imageLoader}
-        fill={fill}
-        sizes={sizes}
-        quality={quality}
-        priority={priority}
-        placeholder={placeholder}
-        onLoadingCompete={onLoadingCompete}
-        onLoad={onLoad}
-        onError={onError}
-        loading={loading}
-        blurDataURL={blurDataURL}
-      />
+      {imgNone}
       {desc && <figcaption className={figcaptionClass}>{desc}</figcaption>}
     </figure>
   );

@@ -17,8 +17,8 @@ export interface LabelProps {
 
 export const Label: React.FC<LabelProps> = ({
   text,
-  size,
-  theme,
+  size = 3,
+  theme = 0,
   customStyle,
 }) => {
   const themeName = getKeyByValue(eTheme, theme);

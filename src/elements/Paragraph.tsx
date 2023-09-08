@@ -15,8 +15,8 @@ export interface ParagraphProps {
 
 export const Paragraph: React.FC<ParagraphProps> = ({
   content,
-  size,
-  theme,
+  size = 3,
+  theme = 0,
 }) => {
   const themeName = getKeyByValue(eTheme, theme);
   const sizeName = getKeyByValue(eSize, size);

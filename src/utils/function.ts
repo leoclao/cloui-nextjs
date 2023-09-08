@@ -1,5 +1,5 @@
 // Get Key By Value
-export function getKeyByValue(eObj: any, value: any): string | undefined {
+export function getKeyByValue(eObj: any, value: number): any {
   for (const key in eObj) {
     if (eObj[key] === value) {
       return key;
