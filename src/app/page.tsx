@@ -48,7 +48,7 @@ export default function Home() {
         <Title theme={0} size={0} title={"Test title element ->"} />
         <Label text={"Label"} size={3} />
         <Metered
-          geo={0}
+          geometry={0}
           icon="fa fa-time"
           size={2}
           status={0}

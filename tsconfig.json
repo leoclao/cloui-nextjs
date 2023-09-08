@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./public",
+    // "rootDir": "src",
+    // "outDir": "./public",
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -22,14 +22,14 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
+    // "baseUrl": "src/",
     "paths": {
-      // "@/*": ["./src/*"],
-      // "@/app/*": ["app/*"],
-      "@/components/*": ["components/*"],
-      "@/elements/*": ["elements/*"],
-      "@/styles/*": ["styles/*"],
-      "@/utils/*": ["utils/*"]
+      "@/*": ["./src/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/elements/*": ["./src/elements/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "include": [

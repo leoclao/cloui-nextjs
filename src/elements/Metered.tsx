@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "classnames/bind";
-import { eTheme, eSize, eDirection, eGeometry, eMessage } from "utils/types";
-import { checkValue, getKeyByValue } from "utils/function";
+import { eTheme, eSize, eDirection, eGeometry, eMessage } from "@/utils/types";
+import { checkValue, getKeyByValue } from "@/utils/function";
 
-import Styles from "styles/modules/Metered.module.scss";
+import Styles from "@/styles/modules/Metered.module.scss";
 
 const cx = classNames.bind(Styles);
 
