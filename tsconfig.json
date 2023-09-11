@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // "rootDir": "src",
-    // "outDir": "./public",
+    "outDir": "./public",
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -34,9 +34,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "./src/**/*.ts",
-    "./src/**/*.mts",
-    "./src/**/*.tsx",
+    "**/*.ts",
+    "**/*.mts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

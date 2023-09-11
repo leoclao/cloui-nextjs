@@ -1,10 +1,23 @@
-/** @type {import('next').NextConfig} */
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
 import path from "path";
 import "dotenv/config";
+import { fileURLToPath } from "url";
 // const path = require('path');
 // require('dotenv').config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const isProd = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
+const isTest = process.env.NODE_ENV === 'test';
+
 export default {
+  assetPrefix: isProd ? "https://cdn.clolico.com" : undefined,
   experimental: {
     typedRoutes: true,
   },
@@ -77,4 +90,7 @@ export default {
       // },
     // },
   },
+  sassOptions: {
+    includePaths: [path.join(__dirname, './src/styles')],
+  }
 };
