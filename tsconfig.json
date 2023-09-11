@@ -34,9 +34,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "./src/**/*.ts",
-    "./src/**/*.mts",
-    "./src/**/*.tsx",
+    "**/*.ts",
+    "**/*.mts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
