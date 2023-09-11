@@ -19,6 +19,7 @@ interface BrandProps {
 }
 
 const Brand: React.FC<BrandProps> = ({ size = 3, href, description, imgSrc, imgWidth, imgHeight }) => {
+  const urlObject = { pathname: href };
   const sizeName = getKeyByValue(eSize, size);
   const style = cx({
     brand: true,
@@ -28,7 +29,7 @@ const Brand: React.FC<BrandProps> = ({ size = 3, href, description, imgSrc, imgW
     <Image src={imgSrc} width={imgWidth} height={imgHeight} alt={`${description}`} />
   );
   const brandDom = href ? (
-    <Link className={style} href={href} title={description}>
+    <Link className={style} href={urlObject} title={description}>
       {imageDom}
     </Link>
   ) : (
